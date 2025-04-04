@@ -1,0 +1,37 @@
+spring:
+  data:
+    mongodb:
+      host: localhost
+      port: 27017
+      database: bankingmanagement-api
+  application:
+    name: bankingmanagement-api
+
+  profiles:
+    active: prod
+
+logging:
+  level:
+    com:
+      boot:
+        banking: debug
+  file:
+    name: bankmanagement.log
+  pattern:
+    file: "%d{yyyy-MM-dd HH:mm:ss} - %msg%n"
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: info,health,metrics,loggers,beans,mappings,threaddump,env,caches
+  endpoint:
+    health:
+      show-details: always
+
+
+
+
+
+
+
