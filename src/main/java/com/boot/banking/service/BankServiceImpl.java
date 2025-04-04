@@ -1,4 +1,12 @@
 package com.boot.banking.service;
 
-public class BankServiceImpl {
+import com.boot.banking.repository.BankRepository;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+@Service
+public class BankServiceImpl implements BankService {
+
+    @Autowired
+    BankRepository bankRepository;
 }
